@@ -236,6 +236,21 @@ public class AddEditIngredientActivity extends AppCompatActivity {
             return;
         }
 
+        // Validate optional expiry date format
+        if (!expiryDate.isEmpty()
+                && !expiryDate.matches(
+                "\\d{4}-\\d{2}-\\d{2}"
+        )) {
+
+            etExpiryDate.setError(
+                    "Please use the format YYYY-MM-DD"
+            );
+
+            etExpiryDate.requestFocus();
+
+            return;
+        }
+
         if (isEditMode) {
 
             int result = databaseHelper.updatePantryItem(
