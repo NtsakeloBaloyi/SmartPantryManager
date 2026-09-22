@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tvRecipeDetailTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recipe Name"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:paddingBottom="24dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ingredients"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvRecipeIngredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recipe ingredients"
+            android:textSize="16sp"
+            android:paddingBottom="24dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Preparation"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvRecipeInstructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Preparation instructions"
+            android:textSize="16sp"
+            android:paddingBottom="24dp" />
+
+        <Button
+            android:id="@+id/btnBackToSuggestedRecipes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back to Suggested Recipes"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+</ScrollView>
