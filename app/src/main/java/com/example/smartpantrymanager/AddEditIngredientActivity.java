@@ -10,6 +10,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class AddEditIngredientActivity extends AppCompatActivity {
@@ -147,7 +148,7 @@ public class AddEditIngredientActivity extends AppCompatActivity {
         );
 
         btnDeleteIngredient.setOnClickListener(
-                v -> deleteIngredient()
+                v -> confirmDeleteIngredient()
         );
 
         btnBackToPantry.setOnClickListener(v -> {
@@ -308,6 +309,26 @@ public class AddEditIngredientActivity extends AppCompatActivity {
                 ).show();
             }
         }
+    }
+
+    private void confirmDeleteIngredient() {
+
+        new AlertDialog.Builder(this)
+                .setTitle("Delete Ingredient")
+                .setMessage(
+                        "Are you sure you want to delete "
+                                + etIngredientName.getText().toString()
+                                + "?"
+                )
+                .setPositiveButton(
+                        "Delete",
+                        (dialog, which) -> deleteIngredient()
+                )
+                .setNegativeButton(
+                        "Cancel",
+                        null
+                )
+                .show();
     }
 
     private void deleteIngredient() {
